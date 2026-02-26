@@ -1,14 +1,18 @@
 /* ─── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --bg:        #0d1117;
-  --bg-alt:    #161b22;
-  --border:    #30363d;
-  --accent:    #58a6ff;
-  --accent-dim:#1f6feb;
-  --text:      #e6edf3;
-  --muted:     #8b949e;
-  --card-bg:   #161b22;
-  --card-hover:#1c2128;
+  --bg:             #0d1117;
+  --bg-alt:         #161b22;
+  --border:         #30363d;
+  --accent:         #58a6ff;
+  --accent-dim:     #1f6feb;
+  --text:           #e6edf3;
+  --muted:          #8b949e;
+  --card-bg:        #161b22;
+  --card-hover:     #1c2128;
+  --nav-scrolled-bg:rgba(13,17,23,.85);
+  --tag-bg:         rgba(88,166,255,.1);
+  --tag-border:     rgba(88,166,255,.25);
+  --tag-bg-hover:   rgba(88,166,255,.2);
 
   --radius: 8px;
   --radius-lg: 12px;
@@ -19,6 +23,28 @@
   --section-gap: 6rem;
   --container-w: 1100px;
   --narrow-w: 720px;
+}
+
+/* ─── LIGHT THEME ────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:             #ffffff;
+  --bg-alt:         #f6f8fa;
+  --border:         #d0d7de;
+  --accent:         #0969da;
+  --accent-dim:     #0550ae;
+  --text:           #1f2328;
+  --muted:          #57606a;
+  --card-bg:        #ffffff;
+  --card-hover:     #f6f8fa;
+  --nav-scrolled-bg:rgba(255,255,255,.90);
+  --tag-bg:         rgba(9,105,218,.08);
+  --tag-border:     rgba(9,105,218,.25);
+  --tag-bg-hover:   rgba(9,105,218,.15);
+}
+
+/* ─── THEME TRANSITION ───────────────────────────────────── */
+body, .nav, .project-card, .timeline-card, .contact-card, .tag {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 /* ─── RESET ──────────────────────────────────────────────── */
@@ -50,7 +76,7 @@ ul { list-style: none; }
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
 }
 .nav.scrolled {
-  background: rgba(13,17,23,.85);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(12px);
   border-color: var(--border);
 }
@@ -80,6 +106,11 @@ ul { list-style: none; }
 }
 .nav-links a:hover { color: var(--accent); }
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -97,6 +128,26 @@ ul { list-style: none; }
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
 /* ─── HERO ───────────────────────────────────────────────── */
 .hero {
@@ -256,16 +307,16 @@ ul { list-style: none; }
 /* ─── TAGS ───────────────────────────────────────────────── */
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tag {
-  background: rgba(88,166,255,.1);
+  background: var(--tag-bg);
   color: var(--accent);
-  border: 1px solid rgba(88,166,255,.25);
+  border: 1px solid var(--tag-border);
   border-radius: 20px;
   padding: 0.3rem 0.9rem;
   font-family: var(--mono);
   font-size: 0.85rem;
   transition: background 0.2s, border-color 0.2s;
 }
-.tag:hover { background: rgba(88,166,255,.2); }
+.tag:hover { background: var(--tag-bg-hover); }
 .tag-sm { padding: 0.2rem 0.65rem; font-size: 0.78rem; }
 
 /* ─── SKILLS ─────────────────────────────────────────────── */
@@ -470,6 +521,7 @@ ul { list-style: none; }
     gap: 1.25rem;
   }
   .nav-toggle { display: flex; }
+  .theme-toggle { width: 32px; height: 32px; }
 
   .hero-inner { flex-direction: column; text-align: center; gap: 2rem; }
   .hero-bio { margin-inline: auto; }

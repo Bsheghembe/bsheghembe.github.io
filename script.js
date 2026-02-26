@@ -65,6 +65,19 @@ fadeEls.forEach(el => observer.observe(el));
 // ─── FOOTER YEAR ──────────────────────────────────────────────
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ─── THEME TOGGLE ─────────────────────────────────────────────
+const themeToggle = document.getElementById('themeToggle');
+const root        = document.documentElement;
+
+const saved = localStorage.getItem('theme') || 'dark';
+root.setAttribute('data-theme', saved);
+
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // ─── AVATAR FALLBACK ──────────────────────────────────────────
 const avatarImg      = document.getElementById('avatarImg');
 const avatarFallback = document.getElementById('avatarFallback');

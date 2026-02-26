@@ -64,3 +64,15 @@ fadeEls.forEach(el => observer.observe(el));
 
 // ─── FOOTER YEAR ──────────────────────────────────────────────
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ─── AVATAR FALLBACK ──────────────────────────────────────────
+const avatarImg      = document.getElementById('avatarImg');
+const avatarFallback = document.getElementById('avatarFallback');
+
+function showFallback() {
+  avatarImg.style.display      = 'none';
+  avatarFallback.style.display = 'flex';
+}
+avatarImg.addEventListener('error', showFallback);
+// If image already failed before JS ran (cached error)
+if (avatarImg.complete && !avatarImg.naturalWidth) showFallback();

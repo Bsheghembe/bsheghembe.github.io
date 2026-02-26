@@ -18,8 +18,8 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 // ─── TYPED TITLE EFFECT ───────────────────────────────────────
 const titles = [
-  'Full-Stack Developer',
-  'Open Source Enthusiast',
+  'System Administrator',
+  'Software Developer',
   'Problem Solver',
 ];
 let tIdx = 0, cIdx = 0, deleting = false;

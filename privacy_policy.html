@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SciLab Go — Privacy Policy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── PRIVACY PAGE LAYOUT ───────────────────────────── */
+    .pp-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 3rem) 1.5rem 5rem;
+    }
+
+    /* back link */
+    .pp-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .pp-back:hover { color: var(--accent); }
+    .pp-back svg { width: 16px; height: 16px; }
+
+    /* header */
+    .pp-header { margin-bottom: 2.5rem; }
+    .pp-app-label {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 20px;
+      padding: 0.25rem 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .pp-title {
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .pp-date {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* summary banner */
+    .pp-summary {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .pp-summary svg { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .pp-summary p { font-size: 0.95rem; color: var(--text); line-height: 1.6; }
+    .pp-summary strong { color: var(--accent); }
+
+    /* sections */
+    .pp-section {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 0;
+    }
+    .pp-section:last-of-type { border-bottom: 1px solid var(--border); }
+    .pp-section-num {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.35rem;
+    }
+    .pp-section h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .pp-section p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .pp-section p + p { margin-top: 0.6rem; }
+
+    /* highlight pill inside text */
+    .pill {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--accent);
+      border: 1px solid var(--tag-border);
+      border-radius: 20px;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      padding: 0.1rem 0.6rem;
+    }
+
+    /* contact card */
+    .pp-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .pp-contact:hover { opacity: 0.75; }
+    .pp-contact svg { width: 16px; height: 16px; }
+
+    /* footer note */
+    .pp-footer-note {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────────── -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">BS<span class="accent">.</span></a>
+      <ul class="nav-links"></ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── CONTENT ──────────────────────────────────────── -->
+  <main class="pp-wrap">
+
+    <a href="index.html" class="pp-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      Back to profile
+    </a>
+
+    <header class="pp-header">
+      <span class="pp-app-label">SciLab Go</span>
+      <h1 class="pp-title">Privacy Policy</h1>
+      <p class="pp-date">Last updated: February 2026</p>
+    </header>
+
+    <!-- TL;DR banner -->
+    <div class="pp-summary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+      <p><strong>Short version:</strong> SciLab Go collects <strong>no personal data</strong>. Everything stays on your device. No internet connection is required. No ads, no tracking, no third-party SDKs.</p>
+    </div>
+
+    <!-- Sections -->
+    <div class="pp-section">
+      <p class="pp-section-num">01</p>
+      <h2>What We Collect</h2>
+      <p>
+        <strong>Nothing.</strong> SciLab Go does not collect any personal data.
+        The App operates entirely offline. No names, email addresses, location data,
+        device identifiers, or any other personally identifiable information are
+        collected, transmitted, or stored on external servers.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">02</p>
+      <h2>Data Stored on Your Device</h2>
+      <p>
+        The App stores experiment results — readings, graph gradients, star ratings,
+        and conclusions — in a local database on your device using <span class="pill">Hive</span>.
+      </p>
+      <p>
+        This data never leaves your device and is used solely to power the
+        in-app Lab Notebook feature. You can clear it at any time by uninstalling the App.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">03</p>
+      <h2>Third-Party Services</h2>
+      <p>
+        SciLab Go does not integrate any third-party analytics, advertising, tracking,
+        or social media SDKs. No data is shared with any third party, ever.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">04</p>
+      <h2>Internet Access</h2>
+      <p>
+        SciLab Go does not require an internet connection and makes no network requests.
+        You can use it fully offline, anywhere, anytime.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">05</p>
+      <h2>Children's Privacy</h2>
+      <p>
+        The App is designed for O-Level and IGCSE students and is safe for use by children.
+        Because no personal data is collected, the App complies with children's privacy
+        regulations including <span class="pill">COPPA</span> and <span class="pill">GDPR-K</span>.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">06</p>
+      <h2>Changes to This Policy</h2>
+      <p>
+        If this policy changes, the updated version will be posted at this URL with
+        a revised "Last updated" date. Continued use of the App after any changes
+        constitutes acceptance of the updated policy.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <p class="pp-section-num">07</p>
+      <h2>Contact</h2>
+      <p>For any questions about this privacy policy, reach out directly:</p>
+      <a href="mailto:scilabgo@gmail.com" class="pp-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        scilabgo@gmail.com
+      </a>
+    </div>
+
+    <p class="pp-footer-note">
+      SciLab Go · Bakari Sheghembe · <span id="year"></span>
+    </p>
+
+  </main>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', saved);
+    themeToggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

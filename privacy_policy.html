@@ -165,7 +165,7 @@
     <!-- TL;DR banner -->
     <div class="pp-summary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-      <p><strong>Short version:</strong> SciLab Go collects <strong>no personal data</strong>. Everything stays on your device. No internet connection is required. No ads, no tracking, no third-party SDKs.</p>
+      <p><strong>Short version:</strong> SciLab Go does not collect any personal data directly. The App uses <strong>Google AdMob</strong> to serve ads, which may collect certain device information to deliver relevant advertising. Your experiment data never leaves your device.</p>
     </div>
 
     <!-- Sections -->
@@ -173,10 +173,10 @@
       <p class="pp-section-num">01</p>
       <h2>What We Collect</h2>
       <p>
-        <strong>Nothing.</strong> SciLab Go does not collect any personal data.
-        The App operates entirely offline. No names, email addresses, location data,
-        device identifiers, or any other personally identifiable information are
-        collected, transmitted, or stored on external servers.
+        SciLab Go itself does not collect any personal data. We do not collect names,
+        email addresses, or location data. However, the App uses
+        <span class="pill">Google AdMob</span> to display advertisements, which may
+        collect certain information as described in Section 3.
       </p>
     </div>
 
@@ -195,10 +195,27 @@
 
     <div class="pp-section">
       <p class="pp-section-num">03</p>
-      <h2>Third-Party Services</h2>
+      <h2>Advertising — Google AdMob</h2>
       <p>
-        SciLab Go does not integrate any third-party analytics, advertising, tracking,
-        or social media SDKs. No data is shared with any third party, ever.
+        SciLab Go uses <span class="pill">Google AdMob</span> to serve in-app advertisements
+        as a means of keeping the App free for students. AdMob may collect and use the
+        following information to serve relevant ads:
+      </p>
+      <ul style="margin: 0.75rem 0 0.75rem 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.9;">
+        <li>Advertising ID (Android Ad ID)</li>
+        <li>Device model and operating system version</li>
+        <li>IP address (used to infer approximate location)</li>
+        <li>App interaction data (e.g. ad impressions and clicks)</li>
+      </ul>
+      <p>
+        This data is collected by Google and governed by
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+           style="color: var(--accent); text-decoration: underline;">Google's Privacy Policy</a>.
+        We do not have access to or control over the data AdMob collects.
+      </p>
+      <p>
+        You can opt out of personalised advertising at any time through your device settings:
+        <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>.
       </p>
     </div>
 
@@ -206,8 +223,9 @@
       <p class="pp-section-num">04</p>
       <h2>Internet Access</h2>
       <p>
-        SciLab Go does not require an internet connection and makes no network requests.
-        You can use it fully offline, anywhere, anytime.
+        The App requires an internet connection solely to load advertisements via Google AdMob.
+        All science simulation features and the Lab Notebook work fully offline —
+        no internet connection is needed to use the App's core functionality.
       </p>
     </div>
 
@@ -215,9 +233,14 @@
       <p class="pp-section-num">05</p>
       <h2>Children's Privacy</h2>
       <p>
-        The App is designed for O-Level and IGCSE students and is safe for use by children.
-        Because no personal data is collected, the App complies with children's privacy
-        regulations including <span class="pill">COPPA</span> and <span class="pill">GDPR-K</span>.
+        The App is designed for O-Level and IGCSE students. We do not knowingly collect
+        personal information from children under 13. Google AdMob is configured to serve
+        non-personalised ads only in contexts where the audience may include children,
+        in compliance with <span class="pill">COPPA</span> and <span class="pill">GDPR-K</span>.
+      </p>
+      <p>
+        If you are a parent or guardian and believe your child has been exposed to
+        inappropriate data collection, please contact us at the address in Section 7.
       </p>
     </div>
 
